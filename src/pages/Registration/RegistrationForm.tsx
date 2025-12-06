@@ -1,3 +1,4 @@
+
 import { NavLink, useLocation } from "react-router";
 
 const RegistrationForm = () => {
@@ -60,7 +61,8 @@ const RegistrationForm = () => {
         </p>
       </div>
     </div>
-  );
-};
 
-export default RegistrationForm;
+  )
+}
+
+export default RegistrationForm
