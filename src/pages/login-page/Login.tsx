@@ -28,12 +28,12 @@ function Login() {
                     </span>
                 </NavLink>
                 <div className='bg-(--color-surface) flex flex-col  gap-5 p-6 rounded-lg shadow-xl'>
-                    <div className='flex items-center'>
+                    <div className='flex items-center max-md:justify-center'>
                         <img src={logo} className='w-10 h-10 rounded-full object-cover bg-(--color-primary) ' alt="" />
                         <span className='text-2xl font-bold'>Assnani</span>
                     </div>
 
-                    <div className='flex flex-col gap-1'>
+                    <div className='flex flex-col gap-1  max-md:items-center'>
                         <span className='text-2xl font-bold'> Sign In</span>
                         <span className='text-(--color-text-light)'>Enter your credentials to access your account</span>
                     </div>
