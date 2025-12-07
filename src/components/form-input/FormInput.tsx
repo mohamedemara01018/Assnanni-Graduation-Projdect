@@ -9,7 +9,7 @@ interface FormInputProps {
 
 export function FormInput({ id, label, type, placeholder, name, handleChange }: FormInputProps) {
     return (
-        <div >
+        <div className="input-field" >
             <label htmlFor={id}>{label}</label>
             <input
                 id={id}

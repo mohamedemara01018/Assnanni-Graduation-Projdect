@@ -5,36 +5,38 @@ import DoctorRegistration from "./pages/register-page/DoctorRegistration";
 import StudentRegistration from "./pages/register-page/StudentRegistration";
 import ReceptionistRegistration from "./pages/register-page/ReceptionistRegistration";
 import HomePage from "./pages/home-page/HomePage";
+import Login from "./pages/login-page/Login";
 
 const App = () => {
   return (
-    <div>
-      <Routes>
+    <div className="mx-auto w-full max-w-7xl px-4 ">
+      < Routes >
         <Route path="/" element={<HomePage />} />
-        <Route path="/registration" element={<Registration />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Registration />}>
           <Route
-            path="patient-registration"
+            path="patient-register"
             index
             element={<PatientRegistration />}
           />
           <Route
-            path="doctor-registration"
+            path="doctor-register"
             index
             element={<DoctorRegistration />}
           />
           <Route
-            path="student-registration"
+            path="student-register"
             index
             element={<StudentRegistration />}
           />
           <Route
-            path="receptionist-registration"
+            path="receptionist-register"
             index
             element={<ReceptionistRegistration />}
           />
         </Route>
-      </Routes>
-    </div>
+      </Routes >
+    </div >
   );
 };
 
