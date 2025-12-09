@@ -208,7 +208,7 @@ body {
   }
 
   input {
-    @apply bg-gray-200 placeholder:text-gray-500 placeholder:text-sm placeholder:font-sans rounded-md p-2 text-[var(--foreground)];
+    @apply bg-(--color-bg) text-(--color-text) border border-(--color-border) placeholder:text-gray-500 placeholder:text-sm placeholder:font-sans rounded-md p-2;
   }
 
   #name {
@@ -218,10 +218,12 @@ body {
   #name div {
     @apply flex-1;
   }
+
   a.active {
     @apply flex gap-2 text-gray-800 flex-1 h-full justify-center rounded-full font-bold items-center bg-gray-300 px-8;
   }
 }
+
 
 .login-form-container {
   .input-field {
@@ -229,14 +231,16 @@ body {
   }
 
   input {
-    @apply bg-gray-200 placeholder:text-gray-500 placeholder:text-sm placeholder:font-sans rounded-md p-2;
+    @apply bg-(--color-bg) text-(--color-text) border border-(--color-border) placeholder:text-(--color-text-light) outline-0 placeholder:text-sm placeholder:font-sans rounded-md p-2 focus:border-2 focus:border-(--color-primary-light);
   }
 }
+
 
 .registerNavigation {
   a.active {
     @apply flex gap-2 text-gray-800 flex-1 h-full justify-center rounded-full font-bold items-center bg-gray-300 px-8 max-lg:px-4;
   }
+
   a {
     @apply flex justify-center;
   }

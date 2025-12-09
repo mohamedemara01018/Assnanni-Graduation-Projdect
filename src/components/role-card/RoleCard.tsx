@@ -11,7 +11,7 @@ function RoleCard({ path, label, icon }: RoleCardProps) {
     return (
         <NavLink
             to={path}
-            className={"flex gap-2 text-gray-500 flex-1 p-2 items-center"}
+            className={"flex gap-2 text-(--color-text) active:text-(--color-text) flex-1 p-2 items-center"}
         >
             <div className="max-sm:text-xl">
                 {icon}

@@ -3,6 +3,7 @@ import loginImg from '../../assets/login-image.jpg'
 import logo from '../../assets/logo.png'
 import { NavLink } from 'react-router'
 import { GoArrowLeft } from 'react-icons/go'
+import BackHome from '@/components/back-home/BackHome'
 
 function Login() {
     return (
@@ -21,12 +22,9 @@ function Login() {
             </div>
 
             <div className='flex flex-col  gap-3 w-[500px] '>
-                <NavLink to={'/'} className="flex gap-2 text-gray-900 text-lg">
-                    <GoArrowLeft className="translate-y-1  font-sans text-gray-900 text-xl font-medium " />
-                    <span className='text-base font-medium'>
-                        back to home
-                    </span>
-                </NavLink>
+
+                <BackHome />
+
                 <div className='bg-(--color-surface) flex flex-col  gap-5 p-6 rounded-lg shadow-xl'>
                     <div className='flex items-center max-md:justify-center'>
                         <img src={logo} className='w-10 h-10 rounded-full object-cover bg-(--color-primary) ' alt="" />
