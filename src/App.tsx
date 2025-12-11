@@ -4,14 +4,19 @@ import Registration from "./pages/register-page/Registration";
 import DoctorRegistration from "./pages/register-page/DoctorRegistration";
 import StudentRegistration from "./pages/register-page/StudentRegistration";
 import ReceptionistRegistration from "./pages/register-page/ReceptionistRegistration";
-import HomePage from "./pages/home-page/HomePage";
+
 import Login from "./pages/login-page/Login";
+import BrowseDoctors from "./components/HomePage/BrowseDoctors";
+import HomePage from "./routers/Home Page/HomePage";
 
 const App = () => {
+  const isRegister = true;
   return (
-    <div className="w-screen max-w-7xl px-4 flex items-center justify-center h-screen" >
-      < Routes >
-        <Route path="/" element={<HomePage />} />
+    <div className={!isRegister ? "w-11/12" : "w-[95%] m-auto"}>
+      <Routes>
+        <Route path="/" element={<HomePage />}>
+          <Route path="/browse-doctors" element={<BrowseDoctors />} />
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Registration />}>
           <Route
@@ -35,8 +40,8 @@ const App = () => {
             element={<ReceptionistRegistration />}
           />
         </Route>
-      </Routes >
-    </div >
+      </Routes>
+    </div>
   );
 };
 
