@@ -112,9 +112,9 @@
 }
 
 .dark {
-  --color-bg: #1f2937;
+  --color-bg: #111827;
   /* main background */
-  --color-surface: #111827;
+  --color-surface: #1f2937;
   /* cards, panels */
   --color-text: #f9fafb;
   /* main text */
