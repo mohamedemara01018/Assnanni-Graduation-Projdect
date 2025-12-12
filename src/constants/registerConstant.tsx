@@ -50,7 +50,7 @@ export const rolesData = [
 ];
 
 
-export const doctorVerificationFields = [
+export const doctorVerificationFieldsRowOne = [
     {
         id: 'medicalLicenseNumber',
         label: 'Medical License Number',
@@ -65,21 +65,9 @@ export const doctorVerificationFields = [
         placeholder: '123-45-6789',
         name: 'nationalIdNumber'
     },
-    // {
-    //     id: 'specialization',
-    //     label: 'Specialization',
-    //     type: 'select', // Use 'select' for dropdowns
-    //     placeholder: 'Radiology',
-    //     name: 'specialization',
-    //     // In a real app, you would define 'options' here for the dropdown
-    // },
-    {
-        id: 'yearsOfExperience',
-        label: 'Years of Experience',
-        type: 'number',
-        placeholder: '3',
-        name: 'yearsOfExperience'
-    },
+]
+export const doctorVerificationFields = [
+
     {
         id: 'clinicHospitalName',
         label: 'Clinic/Hospital Name',
