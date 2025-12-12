@@ -244,10 +244,9 @@
 .landingScape {
   background-image: url("./assets/landingScapeImage.jpg");
   @apply shadow-xl shadow-lime-500;
-<<<<<<< HEAD
+
 }
-=======
-}
+
 
 .filter {
   background-image: url("./assets/filterImage.png");
@@ -297,4 +296,4 @@
     @apply text-base cursor-pointer text-gray-800 hover:text-gray-500 max-sm:text-sm;
   }
 }
->>>>>>> 421f24564a048338dbc9480e13330d0eed601924
+
