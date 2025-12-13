@@ -1,57 +1,3 @@
-// import { Route, Routes } from "react-router";
-// // import PatientRegistration from "./pages/register-page/PatientRegistration";
-// // import Registration from "./pages/register-page/Registration";
-// // import DoctorRegistration from "./pages/register-page/DoctorRegistration";
-// // import StudentRegistration from "./pages/register-page/StudentRegistration";
-// // import ReceptionistRegistration from "./pages/register-page/ReceptionistRegistration";
-// import Login from "./pages/login-page/Login";
-// import Header from "./components/header/Header";
-// import Landing from "./pages/landing-page/Landing";
-// import Footer from "./components/footer/Footer";
-// import RegisterPage from "./pages/register-page-v2/RegisterPage";
-// import VerifyEmailPage from "./pages/verify-email-page/VerifyEmailPage";
-// import VerifyDoctorPage from "./pages/verify-doctor-page/VerifyDoctorPage";
-// import HomePage from "./routers/Home Page/HomePage";
-// import PatientDashboard from "./components/Patient/Dashboard/PatientDashboard";
-// import BrowseDoctors from "./components/HomePage/BrowseDoctors";
-
-
-
-// const App = () => {
-//   // const isRegister = true;
-//   return (
-
-//     <div className="min-h-screen w-full flex flex-col">
-//       {/* <Header /> */}
-
-//       <main className="flex-1 w-full">
-//         <Routes>
-//           {/* <Route path="/" element={<Landing />} /> */}
-//           <Route path="/login" element={<Login />} />
-//           <Route path="/register" element={<RegisterPage />} />
-//           <Route path="/verify-email" element={<VerifyEmailPage />} />
-//           <Route path="/verify-doctor" element={<VerifyDoctorPage />} />
-
-//           <Route path="/" element={<HomePage />}>
-//             <Route index element={<PatientDashboard />} />
-//             <Route path="/browse-doctors" element={<BrowseDoctors />} />
-//           </Route>
-//           {/* 
-//           <Route path="/register" element={<Registration />}>
-//             <Route index path="patient-register" element={<PatientRegistration />} />
-//             <Route path="doctor-register" element={<DoctorRegistration />} />
-//             <Route path="student-register" element={<StudentRegistration />} />
-//             <Route path="receptionist-register" element={<ReceptionistRegistration />} />
-//           </Route> */}
-//         </Routes>
-//       </main>
-
-//       {/* <Footer /> */}
-//     </div>
-
-//   )
-// }
-// export default App
 
 
 
@@ -77,6 +23,7 @@ import ReceptionistRegistration from "./pages/register-page/ReceptionistRegistra
 import HomePage from "./routers/Home Page/HomePage";
 import PatientDashboard from "./components/Patient/Dashboard/PatientDashboard";
 import BrowseDoctors from "./components/HomePage/BrowseDoctors";
+import PatientPage from "./pages/patient-page/PatientPage";
 
 const App = () => {
   const isRegister = true;
@@ -85,28 +32,25 @@ const App = () => {
     <div className="min-h-screen w-full flex flex-col">
 
       {/* public header */}
-      {/* <Header /> */}
+      <Header />
 
       <main className="flex-1 w-full">
         <Routes>
 
           {/* public routes */}
-          <Route path="/home" element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/verify-email" element={<VerifyEmailPage />} />
           <Route path="/verify-doctor" element={<VerifyDoctorPage />} />
 
-          {/* old registration system */}
-          <Route path="/register" element={<Registration />}>
-            <Route index path="patient-register" element={<PatientRegistration />} />
-            <Route path="doctor-register" element={<DoctorRegistration />} />
-            <Route path="student-register" element={<StudentRegistration />} />
-            <Route path="receptionist-register" element={<ReceptionistRegistration />} />
-          </Route>
+
+          {/* dashboards */}
+          <Route path="/patient" element={<PatientPage />} />
+
 
           {/* authenticated routes */}
-          <Route path="/" element={<HomePage />}>
+          <Route path="/home" element={<HomePage />}>
             <Route index element={<PatientDashboard />} />
             <Route path="browse-doctors" element={<BrowseDoctors />} />
           </Route>
@@ -114,7 +58,7 @@ const App = () => {
         </Routes>
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

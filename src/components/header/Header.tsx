@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 
 function Header() {
     return (
-        <header className='bg-(--color-bg) border-b-2 border-(--color-border)' >
+        <header className='bg-(--color-surface) border-b-2 border-b-(--color-border)' >
             <div className=' wrapper   flex items-center justify-between py-4 '>
                 <div className='flex items-center gap-1'>
                     <img src={logo} alt="" className='w-10 h-10' />
