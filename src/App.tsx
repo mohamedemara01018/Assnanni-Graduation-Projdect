@@ -1,11 +1,7 @@
 
-
-
 import { Route, Routes } from "react-router";
 
 // public pages
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
 import Landing from "./pages/landing-page/Landing";
 import Login from "./pages/login-page/Login";
 import RegisterPage from "./pages/register-page-v2/RegisterPage";
@@ -24,22 +20,22 @@ import HomePage from "./routers/Home Page/HomePage";
 import PatientDashboard from "./components/Patient/Dashboard/PatientDashboard";
 import BrowseDoctors from "./components/HomePage/BrowseDoctors";
 import PatientPage from "./pages/patient-page/PatientPage";
+import DoctorDashboard from "./components/Doctor/Dashboard/DoctorDashboard";
 
 const App = () => {
-  const isRegister = true;
+  let role = "doctor";
+  role = "doctor";
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-
       {/* public header */}
       {/* <Header /> */}
 
       <main className="flex-1 w-full">
         <Routes>
-
           {/* public routes */}
 
-          <Route path="/" element={<Landing />} />
+          <Route path="/landing" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/verify-email" element={<VerifyEmailPage />} />
@@ -56,6 +52,31 @@ const App = () => {
             <Route path="browse-doctors" element={<BrowseDoctors />} />
           </Route> */}
 
+          {/* old registration system */}
+          <Route path="/register" element={<Registration />}>
+            <Route
+              index
+              path="patient-register"
+              element={<PatientRegistration />}
+            />
+            <Route path="doctor-register" element={<DoctorRegistration />} />
+            <Route path="student-register" element={<StudentRegistration />} />
+            <Route
+              path="receptionist-register"
+              element={<ReceptionistRegistration />}
+            />
+          </Route>
+
+          {/* authenticated routes */}
+          <Route path="/" element={<HomePage />}>
+            <Route
+              index
+              element={
+                role === "patient" ? <PatientDashboard /> : <DoctorDashboard />
+              }
+            />
+            <Route path="browse-doctors" element={<BrowseDoctors />} />
+          </Route>
         </Routes>
       </main>
 
