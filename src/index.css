@@ -44,8 +44,17 @@
 }
 
 :root {
-  --color-bg: #f1f1f1;
+  --color-bg: #F9FAFB;
   /* main background */
+
+  /* link */
+  --color-bg-link: #f9fafb;
+  --color-bg-link-hover: #f3f4f6;
+
+  /* bg-blue */
+  --color-bg-blue: #eff6ff;
+  --color-text-blue: #155dfc;
+  /* main background when hover */
   --color-surface: #ffffff;
   /* cards, panels */
   --color-text: #111827;
@@ -112,9 +121,16 @@
 }
 
 .dark {
-  --color-bg: #111827;
+  --color-bg: #101828;
   /* main background */
-  --color-surface: #1f2937;
+  --color-bg-link: #364153;
+  --color-bg-link-hover: #4a5565;
+
+  /* bg-blue */
+  --color-bg-blue: #1c398e;
+  --color-text-blue: #51a2ff;
+
+  --color-surface: #1E2939;
   /* cards, panels */
   --color-text: #f9fafb;
   /* main text */
@@ -124,7 +140,7 @@
   /* borders / dividers */
 
   /* blue accent */
-  --color-primary: #3b82f6;
+  --color-primary: #155DFC;
   /* blue-500 */
   --color-primary-light: #60a5fa;
   /* blue-400 */
@@ -247,11 +263,13 @@
 .filter {
   background-image: url("./assets/filterImage.png");
   background-size: 100% 100%;
-  @apply h-[40vh] max-[1050px]:h-[50vh]  flex flex-col  justify-center p-10 gap-8 mb-6 rounded-xl;
+  @apply h-[40vh] max-[1050px]:h-[50vh] flex flex-col justify-center p-10 gap-8 mb-6 rounded-xl;
 }
+
 .filterPreview {
   div {
     @apply flex gap-2 first:bg-blue-400 text-gray-600 first:text-white rounded-lg p-4 py-2 border-gray-700 border-2 cursor-pointer active:bg-blue-500;
+
     svg {
       @apply translate-y-1;
     }
@@ -260,15 +278,20 @@
 
 .nav {
   @apply p-2 fixed w-1/6;
+
   ul {
-    @apply flex flex-col gap-8 text-lg justify-center  w-full;
+    @apply flex flex-col gap-8 text-lg justify-center w-full;
+
     li {
       @apply flex gap-2 justify-center [1200px]:justify-normal border-b-2 border-gray-400 py-3 border-dashed;
+
       a {
         @apply flex gap-2;
+
         svg {
           @apply translate-y-1 text-2xl text-blue-700;
         }
+
         span {
           @apply max-[1200px]:hidden;
         }
@@ -279,19 +302,24 @@
 
 .icon {
   @apply bg-gray-50 flex flex-col gap-3 justify-center items-center rounded-2xl;
+
   div {
     @apply p-4 w-fit bg-linear-30 from-blue-600 to-cyan-300 rounded-2xl max-sm:p-3;
+
     svg {
       @apply text-5xl fill-gray-100 max-sm:text-4xl;
     }
   }
+
   h4 {
     @apply text-lg font-semibold text-center max-sm:text-base;
   }
+
   a {
     @apply text-base cursor-pointer text-gray-800 hover:text-gray-500 max-sm:text-sm;
   }
 }
+
 
 .doctor {
   ul {
