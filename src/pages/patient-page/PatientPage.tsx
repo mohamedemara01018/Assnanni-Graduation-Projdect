@@ -26,8 +26,8 @@ const appointments = [
 function PatientPage() {
     return (
         <DashboardLayout pageTitle={'Patient dashboard'}>
-            <div className="py-6 wrapper flex  flex-col gap-8">
 
+            <>
                 <div >
                     <h1 className="text-3xl text-(--color-text)">Welcome Back, John</h1>
                     <p className=" text-(--color-text-light)">Here's your health dashboard overview</p>
@@ -156,9 +156,9 @@ function PatientPage() {
                         </div>
                     </div>
                 </div>
+            </>
 
-            </div >
-        </DashboardLayout>
+        </DashboardLayout >
     )
 }
 
